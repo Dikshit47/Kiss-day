@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kiss for You 💋</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#ff758c;
+  color:white;
+  text-align:center;
+  font-family:sans-serif;
+}
+.heart{
+  font-size:60px;
+  animation:beat 1s infinite;
+}
+@keyframes beat{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.2);}
+}
+</style>
+</head>
+<body>
+
+<div>
+  <div class="heart">❤️</div>
+  <h2 id="msg"></h2>
+  <p>
+    A kiss is a silent promise,<br>
+    that my heart belongs to you forever 💖
+  </p>
+  <button onclick="next()">Forever →</button>
+</div>
+
+<script>
+const name=localStorage.getItem("loveName")||"Love";
+document.getElementById("msg").innerText="A sweet kiss for you, "+name+" 💋";
+function next(){location.href="forever.html";}
+</script>
+
+</body>
+</html>
