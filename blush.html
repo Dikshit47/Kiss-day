@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blushing...</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#ffd1dc;
+  font-family:sans-serif;
+  text-align:center;
+}
+.lips{
+  font-size:40px;
+  position:absolute;
+  animation:float 6s infinite linear;
+}
+@keyframes float{
+  from{transform:translateY(100vh);}
+  to{transform:translateY(-10vh);}
+}
+</style>
+</head>
+<body>
+
+<div>
+  <h1>☺️ Someone is blushing ☺️</h1>
+  <p>Your love is smiling right now...</p>
+  <button onclick="next()">Next 💞</button>
+</div>
+
+<script>
+function next(){location.href="kiss.html";}
+setInterval(()=>{
+  let l=document.createElement("div");
+  l.className="lips";
+  l.style.left=Math.random()*100+"vw";
+  l.innerHTML="💋";
+  document.body.appendChild(l);
+  setTimeout(()=>l.remove(),6000);
+},800);
+</script>
+
+</body>
+</html>
