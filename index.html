@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kiss Day 💋</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(45deg,#ff4d6d,#ff758c);
+  font-family:sans-serif;
+  text-align:center;
+  color:white;
+}
+input,button{
+  padding:10px;
+  border:none;
+  border-radius:20px;
+  margin-top:10px;
+}
+button{
+  background:#fff;
+  color:#ff4d6d;
+  cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div>
+  <h1>💋 Happy Kiss Day 💋</h1>
+  <p>Enter your love's name</p>
+  <input id="name" placeholder="Her Name">
+  <br>
+  <button onclick="go()">Continue ❤️</button>
+</div>
+
+<script>
+function go(){
+  const name=document.getElementById("name").value;
+  if(name===""){alert("Enter name ❤️");return;}
+  localStorage.setItem("loveName",name);
+  location.href="blush.html";
+}
+</script>
+
+</body>
+</html>
