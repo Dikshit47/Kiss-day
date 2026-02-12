@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Forever 💫</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background:black;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  font-family:sans-serif;
+  overflow:hidden;
+}
+.star{
+  position:absolute;
+  width:2px;
+  height:2px;
+  background:white;
+  animation:twinkle 2s infinite;
+}
+@keyframes twinkle{
+  50%{opacity:0.2;}
+}
+</style>
+</head>
+<body>
+
+<div>
+  <h1>✨ One Kiss, Forever Yours ✨</h1>
+  <p id="final"></p>
+</div>
+
+<script>
+const name=localStorage.getItem("loveName")||"Love";
+document.getElementById("final").innerText=
+  name + ", my love for you will never fade 💖";
+
+for(let i=0;i<80;i++){
+  let s=document.createElement("div");
+  s.className="star";
+  s.style.left=Math.random()*100+"vw";
+  s.style.top=Math.random()*100+"vh";
+  document.body.appendChild(s);
+}
+</script>
+
+</body>
+</html>
